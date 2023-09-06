@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Your Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateMinLength="@{6}"
+                        app:validateMinLengthMessage="@{@string/max_digits_name}"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilName"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Your Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateType='@{"email"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilEmail"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Your User Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateType='@{"username"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilUserName"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Url">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateType='@{"url"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilUrl"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Your Credit Car Number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edCreditCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateType='@{"creditCard"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCPF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilCreditCard"
+                    android:layout_margin="10dp"
+                    android:hint="Enter CPF">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edCPF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateType='@{"cpf"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilCPF"
+                    android:layout_margin="10dp"
+                    android:hint="Enter Date">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateDate='@{"dd/MM/yyyy"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilRegex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilDate"
+                    android:layout_margin="10dp"
+                    android:hint="Regex Validation">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edRegex"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        app:validateEmpty="@{true}"
+                        app:validateRegex='@{"[a-zA-Z0-9-._]+"}'
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tilRegex"
+                    android:text="Validate"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/btnValidate"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+        </ScrollView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

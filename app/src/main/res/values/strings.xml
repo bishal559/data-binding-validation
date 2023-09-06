@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">data-binding-validator</string>
+    <string name="empty_name">Your Name Empty</string>
+    <string name="max_digits_name">Name must be 6 digits</string>
+</resources>

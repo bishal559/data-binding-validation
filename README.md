@@ -30,6 +30,9 @@ To enable Data Binding for the use of this library, follow these steps:
            enabled = true
        }
    }
+   dependencies {
+	        implementation 'com.github.bishal559:data-binding-validation:Tag'
+	}
    ```
 
 3. Sync your project with Gradle to apply the changes.
